@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+<h1>CRUD APP</h1>
+<P>Create Read Update Delete</P>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<ul>
+  <li>
+    Projeye bootstrap i dahil et
+    index.html e bootstrap cdn i ekle
+  </li>
+  <li>
+    1-Yeni eklenecek elemani almak için form oluştur :
+     -Form içerisinden gelen verileri al ve state a aktar,
+     -Ekle butonuna basildiği  anda forma girilen bilgilerden yeni obje oluştur.-Oluşturulan objenin değerleri : tarih, kitapismi, id, okunduMu 
+     -Oluşan objeyi kitaplar adindaki bir diziye aktar.(Bunu yapmamizin nedeni birden çok elemani listelemek için en kolay yol bunlari bir dizinin içerisinde tutmak.)
+     -Obje oluşturulduktan sonra inputu sifirla
+  </li>
+  <li>
+    2-Books state'inde tutulan kitaplari al ve map metodu ile listele(listeleden kasit ekrana basmak)
+    - eğer state boşsa ekrana "henuz kitap eklenmedi" yaz
+    - BookCard bileşenine kitap bilgilerini prop olarak gönder
+    - BookCard bileşeninin kitapla ilgili bütün özelliklerini göster
+  </li>
+  <li>
+    3-Kitap Silme: (Silmenin projedeki karsiliği ,silinecek şeyin kitaplar dizisinden çikarilmasi,yani dizi üzerinde bir işlem yapilacak)(Bu tarz cikarma,filtreleme gibi işlemlerin neredeyse tamami içerisindeki elemanin "id" sine göre yapilmali.)
+    - Herhangi bir kitabin sil butonuna butonuna basildiğinda ,calisan fonksiyona silinecek olanin id si gitsin.
+    - Gelen "id" yi fonksiyon içerisine parametre olarak al ve silinecek "id" ye eşit olmayanlari al ve bir diziye aktar.
+    - Oluşan diziyi bir state a aktar.
+  </li>
+  <li>
+   4- Kitabı okundu olarak işaretle
+   -Okundu butonuna basınca çalışan fonksiyona kitabı gönder
+   -Kitabın isRead değerini tersine çevir
+  - Dizi içerisinde değişsecek olan elemanı bul 
+  - o elemanı çıkar ve yerine yenisini ekle
+  </li>
+  <li>
+  5-Düzenleme İşlemini yap:
+  -Düzenleme butonuna tıklanıldığında ekrana bir modal çıksın 
+  -ve düzenlenecek kitabı app.jse e aktarsın (editItem)
+  -Modalda : Kitap ismini değiiştirmek için bir input 
+  - input her değiştiğinde editItem değişkenini günceller ve app.jse e aktarır.
+  -cancel butonu > modalı kapatır
+  -save butonu > input içeriğini alır ve state i günceller.(  Ekrana bastığımız herhangi bir şeyi değiştirmek istiyorsak , yapmamız gereken ilk ve tek şey onun state ini değiştirmek) app.js de bulunan handleEditBook çalıştırır.
+  -çalışan fonksiyon diziden eski elemanı çıkarır yerine yenisini koyar.
+  - kitabı güncellerlen 4.görev deki adımları tekrarla.
+  </li> 
+</ul>
+# crud_react_project
