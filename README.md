@@ -1,47 +1,23 @@
-<h1>CRUD APP</h1>
-<P>Create Read Update Delete</P>
+<h1>CRUD App</h1>
 
-<ul>
-  <li>
-    Projeye bootstrap i dahil et
-    index.html e bootstrap cdn i ekle
-  </li>
-  <li>
-    1-Yeni eklenecek elemani almak için form oluştur :
-     -Form içerisinden gelen verileri al ve state a aktar,
-     -Ekle butonuna basildiği  anda forma girilen bilgilerden yeni obje oluştur.-Oluşturulan objenin değerleri : tarih, kitapismi, id, okunduMu 
-     -Oluşan objeyi kitaplar adindaki bir diziye aktar.(Bunu yapmamizin nedeni birden çok elemani listelemek için en kolay yol bunlari bir dizinin içerisinde tutmak.)
-     -Obje oluşturulduktan sonra inputu sifirla
-  </li>
-  <li>
-    2-Books state'inde tutulan kitaplari al ve map metodu ile listele(listeleden kasit ekrana basmak)
-    - eğer state boşsa ekrana "henuz kitap eklenmedi" yaz
-    - BookCard bileşenine kitap bilgilerini prop olarak gönder
-    - BookCard bileşeninin kitapla ilgili bütün özelliklerini göster
-  </li>
-  <li>
-    3-Kitap Silme: (Silmenin projedeki karsiliği ,silinecek şeyin kitaplar dizisinden çikarilmasi,yani dizi üzerinde bir işlem yapilacak)(Bu tarz cikarma,filtreleme gibi işlemlerin neredeyse tamami içerisindeki elemanin "id" sine göre yapilmali.)
-    - Herhangi bir kitabin sil butonuna butonuna basildiğinda ,calisan fonksiyona silinecek olanin id si gitsin.
-    - Gelen "id" yi fonksiyon içerisine parametre olarak al ve silinecek "id" ye eşit olmayanlari al ve bir diziye aktar.
-    - Oluşan diziyi bir state a aktar.
-  </li>
-  <li>
-   4- Kitabı okundu olarak işaretle
-   -Okundu butonuna basınca çalışan fonksiyona kitabı gönder
-   -Kitabın isRead değerini tersine çevir
-  - Dizi içerisinde değişsecek olan elemanı bul 
-  - o elemanı çıkar ve yerine yenisini ekle
-  </li>
-  <li>
-  5-Düzenleme İşlemini yap:
-  -Düzenleme butonuna tıklanıldığında ekrana bir modal çıksın 
-  -ve düzenlenecek kitabı app.jse e aktarsın (editItem)
-  -Modalda : Kitap ismini değiiştirmek için bir input 
-  - input her değiştiğinde editItem değişkenini günceller ve app.jse e aktarır.
-  -cancel butonu > modalı kapatır
-  -save butonu > input içeriğini alır ve state i günceller.(  Ekrana bastığımız herhangi bir şeyi değiştirmek istiyorsak , yapmamız gereken ilk ve tek şey onun state ini değiştirmek) app.js de bulunan handleEditBook çalıştırır.
-  -çalışan fonksiyon diziden eski elemanı çıkarır yerine yenisini koyar.
-  - kitabı güncellerlen 4.görev deki adımları tekrarla.
-  </li> 
-</ul>
-# crud_react_project
+<p>Bookworm is a React-based application that helps you manage your book collection efficiently. It allows you to add new books, edit existing ones, delete entries, and track the read status of each book. Designed with a user-friendly interface, Bookworm makes it easy to keep your reading list organized and up-to-date.</p>
+
+<h2>Features</h2>
+
+<list>
+
+- Add Books: Quickly add new books to your collection.
+
+- Edit Book Details: Modify book titles using an easy-to-use modal interface.
+
+- Delete Books: Remove books from your list with a confirmation prompt.
+
+- Toggle Read Status: Mark books as read or unread with a single click.
+
+- Responsive Design: User-friendly layout optimized for various screen sizes.
+
+</list>
+
+<h2>Preview:</h2>
+
+![](image.gif)
